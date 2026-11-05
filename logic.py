@@ -2,7 +2,7 @@
 Pure game-logic functions — no Pygame dependency.
 
 ================================================================================
-YOUR NAME  : ___________________________
+YOUR NAME  : Jacob Morris
 STUDENT ID : ___________________________
 ================================================================================
 Implement all 7 functions below. These are pure functions — they take
@@ -79,7 +79,12 @@ def isWallCollision(wormCoords):
         worm = [{'x': 10, 'y': 10}, ...]   ->  False  (safe)
     """
     # TODO: implement this function
-    pass
+    head = wormCoords[0]
+
+    if (head['x'] < 0 or head['x'] >= CELLWIDTH or
+            head['y'] < 0 or head['y'] >= CELLHEIGHT):
+        return True
+    else: return False
 
 
 # ─────────────────────────────────────────────────────────────────────────────
