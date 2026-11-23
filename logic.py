@@ -51,7 +51,19 @@ def getNewHead(wormCoords, direction):
         - Return a brand-new dict; do not reuse the existing head dict.
     """
     # TODO: implement this function
-    pass
+    head = wormCoords[0]
+    new_head = {'x': head['x'], 'y': head['y']}
+
+    if direction == RIGHT:
+        new_head['x'] += 1
+    elif direction == LEFT:
+        new_head['x'] -= 1
+    elif direction == UP:
+        new_head['y'] -= 1
+    elif direction == DOWN:
+        new_head['y'] += 1
+    
+    return new_head
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -84,7 +96,8 @@ def isWallCollision(wormCoords):
     if (head['x'] < 0 or head['x'] >= CELLWIDTH or
             head['y'] < 0 or head['y'] >= CELLHEIGHT):
         return True
-    else: return False
+    else: 
+        return False
 
 
 # ─────────────────────────────────────────────────────────────────────────────
