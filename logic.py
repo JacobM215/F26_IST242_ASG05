@@ -212,7 +212,16 @@ def isOppositeDirection(current, new):
         isOppositeDirection(RIGHT, RIGHT)  ->  False   (same is NOT opposite)
     """
     # TODO: implement this function
-    pass
+    if current == UP and new == DOWN:
+        return True
+    elif current == DOWN and new == UP:
+        return True
+    elif current == LEFT and new == RIGHT:
+        return True
+    elif current == RIGHT and new == LEFT:
+        return True
+    else:
+        return False
 
 
 # ─────────────────────────────────────────────────────────────────────────────
