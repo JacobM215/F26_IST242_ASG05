@@ -152,8 +152,12 @@ def hasEatenApple(wormCoords, apple):
         apple = {'x': 11, 'y': 10}   ->  False
     """
     # TODO: implement this function
-    pass
+    head = wormCoords [0]
 
+    if head['x'] == apple['x'] and head['y'] == apple['y']:
+        return True
+    else:
+        return False
 
 # ─────────────────────────────────────────────────────────────────────────────
 # TASK 5 — getScore()                                                 [10 pts]
