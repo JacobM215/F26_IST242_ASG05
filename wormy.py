@@ -167,8 +167,16 @@ def runGame():
             FPSCLOCK.tick(FPS)
     """
     # TODO: implement this function
-    pass
+    startx = random.randint(5, CELLWIDTH - 6)
+    starty = random.randint(5, CELLHEIGHT -6)
 
+    wormCoords = [
+        {'x': startx, 'y': starty},
+        {'x': startx - 1, 'y': starty},
+        {'x': startx - 2, 'y': starty} ]
+
+    direction = RIGHT
+    apple = getRandomLocation()
 
 if __name__ == '__main__':
     main()
