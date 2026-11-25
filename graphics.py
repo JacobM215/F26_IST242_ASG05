@@ -2,7 +2,7 @@
 All Pygame drawing and rendering functions.
 Surfaces and fonts are passed as parameters — no globals imported.
 ================================================================================
-YOUR NAME  : ___________________________
+YOUR NAME  : Jacob Morris
 STUDENT ID : ___________________________
 ================================================================================
 Implement drawWorm() and drawApple() below (Tasks 8 and 9).
@@ -51,7 +51,15 @@ def drawWorm(DISPLAYSURF, wormCoords, direction=RIGHT):
         direction  (str):  Current movement direction (for eye orientation).
     """
     # TODO: implement this function
-    pass
+    for index, segment in enumerate(wormCoords):
+        px = segment['x'] * CELLSIZE
+        py = segment['y'] * CELLSIZE
+
+        outerrect = pygame.Rect(px + 1, py + 1, CELLSIZE - 2, CELLSIZE -2)
+        innerrect = pygame.Rect(px + 4, py + 4, CELLSIZE - 8, CELLSIZE -8)
+
+        pygame.draw.rect(DISPLAYSURF, DARKGREEN, outerrect, border_radius=6)
+        pygame.draw.rect(DISPLAYSURF, GREEN, innerrect, border_radius=4)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
