@@ -1,3 +1,5 @@
+<img width="694" height="489" alt="image" src="https://github.com/user-attachments/assets/4bc585ac-4d48-4454-927c-57dbc3fad034" />
+
 ## Objective
 In this project you will complete a fully playable Wormy snake game using Python and the Pygame library. A working skeleton (wormy.py) has already been provided with constants, helper functions, and screen management code. Your job is to implement the 9 core functions that make the game run.
 
