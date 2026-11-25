@@ -42,7 +42,7 @@ WORMY — Main Entry Point
 ================================================================================
 Course        : IST 242 — Intermediate Python Programming
 Project       : Wormy Snake Game
-Your Name     : ___________________________
+Your Name     : Jacob Morris
 Student ID    : ___________________________
 
 Instructions:
@@ -210,6 +210,14 @@ def runGame():
             apple = getRandomLocation()
         else:
             del wormCoords[-1]
+   
+        DISPLAYSURF.fill(BGCOLOR)
+        drawGrid(DISPLAYSURF)
+        drawWorm(DISPLAYSURF, wormCoords, direction)
+        drawApple(DISPLAYSURF, apple)
+        drawScore(DISPLAYSURF, BASICFONT, getScore(wormCoords))
+        pygame.display.update()
+        FPSCLOCK.tick(FPS)
 
 if __name__ == '__main__':
     main()
