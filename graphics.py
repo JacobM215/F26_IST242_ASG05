@@ -88,7 +88,11 @@ def drawApple(DISPLAYSURF, coord):
         coord (dict): {'x': int, 'y': int} grid position of the apple.
     """
     # TODO: implement this function
-    pass
+    px = coord['x'] * CELLSIZE
+    py = coord['y'] * CELLSIZE
+
+    applerect = pygame.Rect(px, py, CELLSIZE, CELLSIZE)
+    pygame.draw.rect(DISPLAYSURF, RED, applerect)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
