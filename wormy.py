@@ -178,5 +178,25 @@ def runGame():
     direction = RIGHT
     apple = getRandomLocation()
 
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                terminate()
+            elif event.type == KEYDOWN:
+                if event.key == K_UP or event.key == K_w:
+                    if not isOppositeDirection(direction, UP):
+                        direction = UP
+            elif event.key == K_DOWN or event.key == K_s:
+                if not isOppositeDirection(direction, DOWN):
+                    direction = DOWN
+            elif event.key == K_LEFT or event.key == K_a:
+                if not isOppositeDirection(direction, LEFT):
+                    direction = LEFT
+            elif event.key == K_RIGHT or event.key == K_d:
+                if not isOppositeDirection(direction, RIGHT):
+                    direction = RIGHT
+            elif event.key == K_ESCAPE:
+                terminate()
+
 if __name__ == '__main__':
     main()
