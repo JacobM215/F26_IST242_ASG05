@@ -197,6 +197,19 @@ def runGame():
                     direction = RIGHT
             elif event.key == K_ESCAPE:
                 terminate()
+    
+        wormCoords.insert(0, getNewHead(wormCoords, direction))
+
+        if isWallCollision(wormCoords):
+            return
+
+        if isSelfCollision(wormCoords):
+            return
+
+        if hasEatenApple(wormCoords, apple):
+            apple = getRandomLocation()
+        else:
+            del wormCoords[-1]
 
 if __name__ == '__main__':
     main()
